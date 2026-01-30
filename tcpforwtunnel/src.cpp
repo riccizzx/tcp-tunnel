@@ -121,7 +121,7 @@ void relay(tunnel_ctx& ctx) {
 			printf("\n");
 			
 			if (bytes <= 0) break;
-			send(ctx.remote_socket, buffer, sizeof(buffer), 0);
+			send(ctx.remote_socket, buffer, bytes, 0);
 		
 		}
 
@@ -134,7 +134,7 @@ void relay(tunnel_ctx& ctx) {
 			printf("\n");
 
 			if (bytes <= 0)break;
-			send(ctx.client_socket, buffer, sizeof(buffer), 0);
+			send(ctx.client_socket, buffer, bytes, 0);
 
 		}
 	
